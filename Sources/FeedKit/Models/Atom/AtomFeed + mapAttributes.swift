@@ -355,6 +355,26 @@ extension AtomFeed {
                 self.entries?.last?.yt = YouTubeNamespace()
             }
             
+            // MARK: AtomFeedDeletedEntry
+            
+        case
+        .feedDeletedEntry:
+            
+            if self.deletedEntries == nil {
+                self.deletedEntries = []
+            }
+            self.deletedEntries?.append(AtomFeedDeletedEntry(attributes: attributes))
+            
+        case 
+        .feedDeletedEntryBy,
+        .feedDeletedEntryByName,
+        .feedDeletedEntryByEmail,
+        .feedDeletedEntryByUri:
+            
+            if self.deletedEntries?.last?.by == nil {
+                self.deletedEntries?.last?.by = AtomFeedAuthor()
+            }
+            
         default: break
             
         }

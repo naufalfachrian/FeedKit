@@ -81,6 +81,10 @@ extension AtomFeed {
         case .feedEntryMediaScenesMediaSceneSceneEndTime:      self.entries?.last?.media?.mediaScenes?.last?.sceneEndTime        = string.toDuration()
         case .feedEntryYouTubeChannelID:                       self.entries?.last?.yt?.channelID                                 = self.entries?.last?.yt?.channelID?.appending(string) ?? string
         case .feedEntryYouTubeVideoID:                         self.entries?.last?.yt?.videoID                                   = self.entries?.last?.yt?.videoID?.appending(string) ?? string
+        case .feedDeletedEntryComment:                         self.deletedEntries?.last?.comment                                = self.deletedEntries?.last?.comment?.appending(string) ?? string
+        case .feedDeletedEntryByName:                          self.deletedEntries?.last?.by?.name                               = self.deletedEntries?.last?.by?.name?.appending(string) ?? string
+        case .feedDeletedEntryByEmail:                         self.deletedEntries?.last?.by?.email                              = self.deletedEntries?.last?.by?.email?.appending(string) ?? string
+        case .feedDeletedEntryByUri:                           self.deletedEntries?.last?.by?.uri                                = self.deletedEntries?.last?.by?.uri?.appending(string) ?? string
         default: break
         }
     }

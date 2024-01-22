@@ -162,6 +162,10 @@ open class AtomFeed {
     /// Atom Entry Document.
     public var entries: [AtomFeedEntry]?
     
+    /// The at:deleted-entry element represents an Atom Entry that has been
+    /// removed.
+    public var deletedEntries: [AtomFeedDeletedEntry]?
+    
     public init() { }
     
 }

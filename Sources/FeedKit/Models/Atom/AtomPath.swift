@@ -112,4 +112,13 @@ enum AtomPath: String {
     case feedEntryYouTubeChannelID                         = "/feed/entry/yt:channelId"
     case feedEntryYouTubeVideoID                           = "/feed/entry/yt:videoId"
     
+    // MARK: AtomFeedDeletedEntry
+    
+    case feedDeletedEntry                                  = "/feed/at:deleted-entry"
+    case feedDeletedEntryComment                           = "/feed/at:deleted-entry/at:comment"
+    case feedDeletedEntryBy                                = "/feed/at:deleted-entry/at:by"
+    case feedDeletedEntryByName                            = "/feed/at:deleted-entry/at:by/name"
+    case feedDeletedEntryByEmail                           = "/feed/at:deleted-entry/at:by/email"
+    case feedDeletedEntryByUri                             = "/feed/at:deleted-entry/at:by/uri"
+    
 }

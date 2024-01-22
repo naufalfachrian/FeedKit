@@ -1,0 +1,12 @@
+ <feed xmlns="http://www.w3.org/2005/Atom"
+           xmlns:at="http://purl.org/atompub/tombstones/1.0">
+        <at:deleted-entry
+          ref="tag:example.org,2005:/entries/2"
+          when="2005-11-29T12:11:12Z">
+          <at:by>
+            <name>John Doe</name>
+            <email>jdoe@example.org</email>
+          </at:by>
+          <at:comment>Removed comment spam</at:comment>
+        </at:deleted-entry>
+     </feed>
