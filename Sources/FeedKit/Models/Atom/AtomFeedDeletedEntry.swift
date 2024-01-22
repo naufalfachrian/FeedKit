@@ -89,3 +89,28 @@ extension AtomFeedDeletedEntry.Attributes {
     }
     
 }
+
+
+// MARK: - Equatable
+
+extension AtomFeedDeletedEntry: Equatable {
+    
+    public static func == (lhs: AtomFeedDeletedEntry, rhs: AtomFeedDeletedEntry) -> Bool {
+        return
+            lhs.attributes == rhs.attributes &&
+            lhs.by == rhs.by &&
+            lhs.comment == rhs.comment
+    }
+    
+}
+
+
+extension AtomFeedDeletedEntry.Attributes: Equatable {
+    
+    public static func == (lhs: AtomFeedDeletedEntry.Attributes, rhs: AtomFeedDeletedEntry.Attributes) -> Bool {
+        return
+            lhs.ref == rhs.ref &&
+            lhs.when == rhs.when
+    }
+    
+}

@@ -188,7 +188,8 @@ extension AtomFeed: Equatable {
             lhs.icon == rhs.icon &&
             lhs.logo == rhs.logo &&
             lhs.rights == rhs.rights &&
-            lhs.entries == rhs.entries
+            lhs.entries == rhs.entries &&
+            lhs.deletedEntries == rhs.deletedEntries
     }
     
 }
